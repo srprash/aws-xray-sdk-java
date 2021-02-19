@@ -44,6 +44,7 @@ jobs:
         env:
           CI: true
       - name: list coverage report
+        if: ${{ matrix.coverage }}
         run: ls -l jacoco/build/reports/jacoco/codeCoverageReport/
       - uses: codecov/codecov-action@v1
         if: ${{ matrix.coverage }}
