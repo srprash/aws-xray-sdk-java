@@ -48,6 +48,8 @@ jobs:
         run: ls -l jacoco/build/reports/jacoco/codeCoverageReport/
       - uses: codecov/codecov-action@v1
         if: ${{ matrix.coverage }}
+        with:
+          - files: ./jacoco/build/reports/jacoco/codeCoverageReport/codeCoverageReport.xml
       - uses: actions/upload-artifact@v2
         if: ${{ matrix.coverage }}
         with:
