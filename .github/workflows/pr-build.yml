@@ -2,7 +2,7 @@ name: Continuous Build
 on:
   pull_request:
     branches:
-      - master
+      - code_cov_test_branch
 
 jobs:
   build:
